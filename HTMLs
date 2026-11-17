@@ -1,0 +1,375 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>بطاقة ندوة سكلز بنك</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: right-to-left mirror of the English tool: form on the right, preview on the left; stacks on phones.
+   Single committed dark look, built from the six-colour palette the client supplied. */
+:root{
+  --bg:#080828;
+  --field:#0e0e34;
+  --line:#2a2a62;
+  --fg:#e9f2f9;
+  --muted:#a3b0cf;
+  --teal:#40bda9;
+  --blue:#4d88e8;
+  --font:'Cairo','Segoe UI',Tahoma,Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.7;
+  padding-block:30px 44px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.app{max-width:1080px;margin:0 auto}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.brand{font-weight:800;font-size:30px;border-bottom:3px solid var(--teal);padding-bottom:2px;line-height:1.4}
+.year{font-weight:800;font-size:20px;color:var(--teal)}
+h1{font-weight:800;font-size:clamp(34px,6.4vw,58px);line-height:1.25;margin:0 0 6px;color:var(--teal);text-wrap:balance}
+.steps{margin:0 0 36px;color:var(--muted)}
+.steps b{color:var(--fg);font-weight:600}
+.grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:52px;align-items:start}
+@media (max-width:820px){.grid{grid-template-columns:minmax(0,1fr);gap:36px}}
+h2{font-weight:800;font-size:20px;color:var(--teal);margin:0 0 20px}
+label.f{display:block;font-weight:600;font-size:16px;color:var(--muted);margin-bottom:6px}
+.field{margin-bottom:18px}
+input[type=text]{
+  width:100%;font:inherit;font-size:18px;color:var(--fg);background:var(--field);border:1px solid var(--line);
+  border-radius:12px;padding:11px 18px;transition:background .15s,color .15s;
+}
+input[type=text]::placeholder{color:#6f7ca5}
+input[type=text]:focus{background:var(--fg);color:var(--bg)}
+input[type=text]:focus::placeholder{color:#7f8aa8}
+input[type=text]:focus-visible,.drop:focus-within,button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.drop{
+  position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;cursor:pointer;
+  border:2px dashed var(--line);border-radius:14px;padding:30px 14px;background:var(--field);
+}
+.drop.over{border-color:var(--teal)}
+.drop strong{color:var(--teal);font-weight:700}
+.drop small{color:var(--muted);font-size:15px}
+.drop input{position:absolute;opacity:0;width:1px;height:1px}
+.cam{color:var(--muted);margin-bottom:6px}
+.cam.off{display:none}
+.thumb{display:none;width:84px;height:84px;border-radius:12px;object-fit:cover;border:3px solid var(--teal);margin-bottom:8px}
+.thumb.on{display:block}
+button{
+  display:flex;align-items:center;justify-content:center;gap:12px;width:100%;
+  font-family:var(--font);font-weight:800;font-size:20px;
+  border:2px solid var(--teal);border-radius:12px;padding:10px 22px 12px;cursor:pointer;background:var(--teal);color:var(--bg);
+}
+button.alt{background:transparent;color:var(--teal)}
+button.small{width:auto;font-size:17px;padding:6px 24px 8px}
+button:disabled{opacity:.4;cursor:not-allowed}
+.hint{color:var(--muted);font-size:15px;margin:10px 0 0;min-height:1.7em}
+.ph{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;
+  border:2px dashed var(--line);border-radius:18px;color:var(--muted)}
+.ph[hidden],#result[hidden]{display:none!important}
+#result img{display:block;width:100%;height:auto;aspect-ratio:1/1;border-radius:18px;border:1px solid var(--line);margin-bottom:16px}
+.tiny{margin:10px 0 0;color:var(--muted);font-size:14px}
+.note{margin:44px 0 0;color:var(--muted)}
+.note strong{color:var(--teal);font-weight:700}
+.post{margin-top:34px}
+textarea{
+  width:100%;min-height:150px;resize:vertical;font:inherit;font-size:16px;line-height:1.8;color:var(--fg);
+  background:var(--field);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px;
+}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:15px}
+</style>
+
+<div class="app" dir="rtl" lang="ar">
+  <header>
+    <div class="brand">سكلز بنك</div>
+    <span class="year">2026</span>
+  </header>
+
+  <h1>ندوة التعليم الإلكتروني 2026</h1>
+  <p class="steps"><b>أدخل بياناتك</b> ← <b>أنشئ بطاقتك</b> ← <b>شاركها على لينكدإن</b></p>
+
+  <div class="grid">
+    <section aria-labelledby="h-form">
+      <h2 id="h-form">بياناتك</h2>
+      <div class="field">
+        <label class="f" for="name">الاسم الكامل</label>
+        <input type="text" id="name" dir="auto" maxlength="50" autocomplete="off" placeholder="مثال: أحمد محمد">
+      </div>
+      <div class="field">
+        <label class="f" for="org">جهة العمل</label>
+        <input type="text" id="org" dir="auto" maxlength="50" autocomplete="off" placeholder="مثال: شركة المستقبل">
+      </div>
+      <div class="field">
+        <label class="f" for="job">المسمى الوظيفي</label>
+        <input type="text" id="job" dir="auto" maxlength="50" autocomplete="off" placeholder="مثال: مصمم تعليمي">
+      </div>
+      <div class="field">
+        <label class="f" for="photo">صورتك الشخصية</label>
+        <label class="drop" id="drop" for="photo">
+          <img class="thumb" id="thumb" alt="">
+          <svg class="cam" id="cam" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.2" r="3.4"/></svg>
+          <span><strong>اضغط للرفع</strong> أو اسحب الصورة هنا</span>
+          <small>JPG أو PNG، ويُفضّل أن تكون الصورة مربعة</small>
+          <input type="file" id="photo" accept="image/png,image/jpeg,image/webp">
+        </label>
+      </div>
+      <button type="button" id="gen" disabled>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 4L4 12l14 8z"/></svg>
+        إنشاء بطاقتي
+      </button>
+      <p class="hint" id="hint" role="status" aria-live="polite">اكتب اسمك للبدء.</p>
+    </section>
+
+    <section aria-labelledby="h-prev">
+      <h2 id="h-prev">المعاينة</h2>
+      <div class="ph" id="ph"><span>ستظهر بطاقتك هنا بعد الضغط على «إنشاء بطاقتي».</span></div>
+      <div id="result" hidden>
+        <img id="preview" alt="معاينة بطاقة المشاركة في ندوة سكلز بنك">
+        <button type="button" class="alt" id="dl">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
+          تحميل الصورة (1080 × 1080)
+        </button>
+        <p class="hint" id="dlhint" role="status" aria-live="polite"></p>
+        <p class="tiny">إذا لم يبدأ التحميل، اضغط مطولًا على الصورة (أو انقر عليها بزر الفأرة الأيمن) واختر حفظ الصورة.</p>
+      </div>
+    </section>
+  </div>
+
+  <p class="note">انشر البطاقة على لينكدإن وأضف الوسم <strong>#سكلز_بنك</strong></p>
+
+  <section class="post">
+    <h2>نص المنشور على لينكدإن</h2>
+    <textarea id="caption" readonly></textarea>
+    <button type="button" class="alt small" id="copy">نسخ النص</button>
+    <p class="hint" id="copyhint" role="status" aria-live="polite"></p>
+  </section>
+
+  <footer><span>سكلز بنك</span><span id="site" dir="ltr"></span></footer>
+</div>
+
+<script>
+(function () {
+  var WEBSITE = 'skillsbank.me';
+  var HASHTAG = '#سكلز_بنك';
+  var T1 = 'ندوة التعليم', T2 = 'الإلكتروني', T3 = '2026';
+  var TOPIC = '«من الفكرة إلى التطوير: رحلة تصميم التعليم الإلكتروني التفاعلي»';
+  var PLACE = 'ندوة مباشرة عبر الإنترنت';
+  var DATE = 'الخميس 19 نوفمبر 2026';
+  var TIME = '11:00 صباحًا – 2:00 ظهرًا بتوقيت السعودية';
+  var CAPTION = 'يسعدني المشاركة في ندوة التعليم الإلكتروني 2026 المقدمة من سكلز بنك بعنوان ' + TOPIC + '، يوم ' + DATE +
+    '، من الساعة 11:00 صباحًا حتى 2:00 ظهرًا بتوقيت المملكة العربية السعودية.\n\n' +
+    '#سكلز_بنك #التعليم_الإلكتروني #التعلم_العملي #التعلم_والتطوير #SkillsBank';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var nameEl = $('name'), jobEl = $('job'), orgEl = $('org'), photoEl = $('photo');
+  var preview = $('preview'), dlBtn = $('dl'), genBtn = $('gen'), dlhint = $('dlhint'), hint = $('hint');
+  var result = $('result'), ph = $('ph'), cam = $('cam'), thumb = $('thumb'), drop = $('drop');
+  var cv = document.createElement('canvas');
+  cv.width = 1080; cv.height = 1080;
+  var ctx = cv.getContext('2d');
+  var photo = null, generated = false, queued = false;
+
+  $('caption').value = CAPTION;
+  $('site').textContent = WEBSITE;
+
+  var FACE = "'Cairo','Segoe UI',Tahoma,Arial,sans-serif";
+  function f(weight, size) { return weight + ' ' + size + 'px ' + FACE; }
+
+  function fit(text, weight, size, maxW, minSize) {
+    var s = size; ctx.font = f(weight, s);
+    while (ctx.measureText(text).width > maxW && s > minSize) { s -= 2; ctx.font = f(weight, s); }
+    return s;
+  }
+
+  function roundRect(x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+  function star(x, y, r) {
+    ctx.beginPath(); ctx.moveTo(x, y - r);
+    ctx.quadraticCurveTo(x, y, x + r, y); ctx.quadraticCurveTo(x, y, x, y + r);
+    ctx.quadraticCurveTo(x, y, x - r, y); ctx.quadraticCurveTo(x, y, x, y - r);
+    ctx.fill();
+  }
+  function iconPin(x, y) {
+    ctx.beginPath(); ctx.moveTo(x, y + 14);
+    ctx.bezierCurveTo(x - 15, y - 1, x - 12, y - 14, x, y - 14);
+    ctx.bezierCurveTo(x + 12, y - 14, x + 15, y - 1, x, y + 14); ctx.stroke();
+    ctx.beginPath(); ctx.arc(x, y - 4, 4.5, 0, Math.PI * 2); ctx.stroke();
+  }
+  function iconCal(x, y) {
+    roundRect(x - 13, y - 11, 26, 24, 4); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(x - 13, y - 3); ctx.lineTo(x + 13, y - 3);
+    ctx.moveTo(x - 6, y - 15); ctx.lineTo(x - 6, y - 8); ctx.moveTo(x + 6, y - 15); ctx.lineTo(x + 6, y - 8); ctx.stroke();
+  }
+  function iconClock(x, y) {
+    ctx.beginPath(); ctx.arc(x, y, 13, 0, Math.PI * 2);
+    ctx.moveTo(x, y - 7); ctx.lineTo(x, y); ctx.lineTo(x + 7, y + 4); ctx.stroke();
+  }
+
+  function draw() {
+    var W = 1080, R = 1000, L = 80;
+    ctx.direction = 'rtl'; ctx.textAlign = 'right'; ctx.textBaseline = 'alphabetic';
+    if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+
+    // background: deep navy, teal glow bottom-left and blue glow top-right (mirrored)
+    ctx.fillStyle = '#080828'; ctx.fillRect(0, 0, W, W);
+    var g1 = ctx.createRadialGradient(0, W, 0, 0, W, 760);
+    g1.addColorStop(0, 'rgba(64,189,169,0.42)'); g1.addColorStop(1, 'rgba(64,189,169,0)');
+    ctx.fillStyle = g1; ctx.fillRect(0, 0, W, W);
+    var g2 = ctx.createRadialGradient(W, 0, 0, W, 0, 640);
+    g2.addColorStop(0, 'rgba(77,136,232,0.20)'); g2.addColorStop(1, 'rgba(77,136,232,0)');
+    ctx.fillStyle = g2; ctx.fillRect(0, 0, W, W);
+
+    // brand with teal underline
+    ctx.fillStyle = '#e9f2f9'; ctx.font = f(800, 46);
+    ctx.fillText('سكلز بنك', R, 122);
+    var bw = ctx.measureText('سكلز بنك').width;
+    ctx.fillStyle = '#40bda9'; ctx.fillRect(R - bw, 140, bw, 4);
+
+    // title, three lines
+    ctx.fillStyle = '#40bda9';
+    var ts = Math.min(fit(T1, 800, 112, 500, 70), fit(T2, 800, 112, 500, 70));
+    ctx.font = f(800, ts);
+    ctx.fillText(T1, R, 268); ctx.fillText(T2, R, 388); ctx.fillText(T3, R, 508);
+
+    // photo: large rounded square with teal frame, top left
+    var S = 372, bx = 64, by = 120;
+    roundRect(bx, by, S, S, 22); ctx.fillStyle = '#10103a'; ctx.fill();
+    ctx.save(); roundRect(bx, by, S, S, 22); ctx.clip();
+    if (photo) {
+      var sc = Math.max(S / photo.width, S / photo.height);
+      var dw = photo.width * sc, dh = photo.height * sc;
+      ctx.drawImage(photo, bx - (dw - S) / 2, by - (dh - S) * 0.3, dw, dh);
+    } else {
+      ctx.fillStyle = '#4d88e8';
+      ctx.beginPath(); ctx.arc(bx + S / 2, by + 140, 62, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(bx + S / 2, by + 350, 130, 110, 0, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.restore();
+    roundRect(bx, by, S, S, 22); ctx.strokeStyle = '#40bda9'; ctx.lineWidth = 6; ctx.stroke();
+
+    // topic and organiser
+    ctx.fillStyle = '#d3def0';
+    fit(TOPIC, 600, 27, 920, 18); ctx.fillText(TOPIC, R, 574);
+    ctx.fillStyle = '#a3b0cf'; ctx.font = f(500, 25); ctx.fillText('مقدمة من سكلز بنك', R, 612);
+
+    // attending badge
+    roundRect(R - 270, 640, 270, 62, 6); ctx.fillStyle = 'rgba(64,189,169,0.14)'; ctx.fill();
+    ctx.strokeStyle = '#40bda9'; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.fillStyle = '#40bda9'; star(R - 30, 671, 11);
+    ctx.font = f(700, 29); ctx.fillText('سأحضر الندوة', R - 54, 682);
+
+    // attendee
+    var name = nameEl.value.trim(), org = orgEl.value.trim(), job = jobEl.value.trim();
+    ctx.globalAlpha = name ? 1 : 0.5; ctx.fillStyle = '#ffffff';
+    var n = name || 'اسمك الكامل';
+    fit(n, 800, 80, 920, 40); ctx.fillText(n, R, 794);
+    ctx.globalAlpha = org ? 1 : 0.5; ctx.fillStyle = '#40bda9';
+    var o = org || 'جهة العمل';
+    fit(o, 700, 34, 920, 22); ctx.fillText(o, R, 840);
+    ctx.globalAlpha = job ? 1 : 0.5; ctx.fillStyle = '#e9f2f9';
+    var j = job || 'المسمى الوظيفي';
+    fit(j, 500, 30, 920, 20); ctx.fillText(j, R, 882);
+    ctx.globalAlpha = 1;
+
+    // details
+    ctx.strokeStyle = '#40bda9'; ctx.lineWidth = 2.6; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.fillStyle = '#e9f2f9'; ctx.font = f(600, 27);
+    iconPin(R - 14, 928); ctx.fillText(PLACE, R - 50, 937);
+    iconCal(R - 14, 968); ctx.fillText(DATE, R - 50, 977);
+    iconClock(R - 14, 1008); ctx.fillText(TIME, R - 50, 1017);
+
+    // footer: website (left-to-right) and hashtag
+    ctx.fillStyle = 'rgba(233,242,249,0.18)'; ctx.fillRect(L, 1034, W - 2 * L, 1);
+    ctx.fillStyle = '#a3b0cf'; ctx.font = f(500, 22);
+    ctx.direction = 'ltr'; ctx.textAlign = 'right';
+    ctx.fillText(WEBSITE, R, 1066);
+    var ww = ctx.measureText(WEBSITE).width;
+    ctx.direction = 'rtl';
+    ctx.fillText('·  ' + HASHTAG, R - ww - 14, 1066);
+
+    preview.src = cv.toDataURL('image/png');
+  }
+
+  function schedule() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function () { queued = false; if (generated) draw(); });
+  }
+
+  function refresh() {
+    var ok = !!nameEl.value.trim();
+    genBtn.disabled = !ok;
+    if (!generated) hint.textContent = ok ? 'اضغط «إنشاء بطاقتي» لمعاينة بطاقتك.' : 'اكتب اسمك للبدء.';
+    else hint.textContent = '';
+    schedule();
+  }
+  [nameEl, jobEl, orgEl].forEach(function (el) { el.addEventListener('input', refresh); });
+
+  function loadFile(file) {
+    if (!file || !/^image\//.test(file.type)) { hint.textContent = 'اختر ملف صورة بصيغة JPG أو PNG.'; return; }
+    var fr = new FileReader();
+    fr.onload = function () {
+      var img = new Image();
+      img.onload = function () { photo = img; thumb.src = fr.result; thumb.classList.add('on'); cam.classList.add('off'); refresh(); };
+      img.onerror = function () { hint.textContent = 'تعذّر قراءة الصورة. جرّب ملفًا آخر.'; };
+      img.src = fr.result;
+    };
+    fr.readAsDataURL(file);
+  }
+  photoEl.addEventListener('change', function () { loadFile(photoEl.files && photoEl.files[0]); });
+  ['dragenter', 'dragover'].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add('over'); }); });
+  ['dragleave', 'drop'].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove('over'); }); });
+  drop.addEventListener('drop', function (e) { loadFile(e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]); });
+
+  genBtn.addEventListener('click', function () {
+    if (!nameEl.value.trim()) return;
+    generated = true; ph.hidden = true; result.hidden = false;
+    draw(); hint.textContent = '';
+    if (result.scrollIntoView) result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  dlBtn.addEventListener('click', async function () {
+    draw();
+    var dl = null;
+    try { dl = window.claude && window.claude.use ? await window.claude.use('downloads') : null; } catch (e) { dl = null; }
+    if (!dl) { dlhint.textContent = 'التحميل المباشر غير متاح هنا. اضغط مطولًا على الصورة واحفظها.'; return; }
+    cv.toBlob(async function (blob) {
+      if (!blob) return;
+      try {
+        await dl.save({ filename: 'SkillsBank-ELearning-Webinar-Card-AR.png', data: blob });
+        dlhint.textContent = 'تم حفظ البطاقة.';
+      } catch (err) {
+        dlhint.textContent = err && err.code === 'declined' ? 'تم إلغاء الحفظ.' : 'تعذّر الحفظ. اضغط مطولًا على الصورة واحفظها.';
+      }
+    }, 'image/png');
+  });
+
+  $('copy').addEventListener('click', function () {
+    var ta = $('caption'), msg = $('copyhint');
+    function fallback() { ta.focus(); ta.select(); msg.textContent = 'تم تحديد النص. انسخه يدويًا.'; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(ta.value).then(function () { msg.textContent = 'تم نسخ النص.'; }, fallback);
+    } else { fallback(); }
+  });
+
+  refresh();
+  if (document.fonts && document.fonts.load) {
+    Promise.all([
+      document.fonts.load("800 40px Cairo", 'سكلز2026'), document.fonts.load("700 30px Cairo", 'سأحضر'),
+      document.fonts.load("600 30px Cairo", 'ندوة'), document.fonts.load("500 20px Cairo", 'skills')
+    ]).then(schedule, schedule);
+    if (document.fonts.ready) document.fonts.ready.then(schedule);
+  }
+})();
+</script>
+
+</body></html>
